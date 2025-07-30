@@ -20,42 +20,42 @@ Setup Instructions<br/>
 
 ### 1. Clone this repository
 
-```"
-git clone <https://github.com/RishiSingla04/GCDS-chatbot.git><br/>
-cd gcds-chatbot
-```
+`
+git clone <https://github.com/RishiSingla04/GCDS-chatbot.git>`
+<br/>
+`cd gcds-chatbot`
 
 ### 2. Install Ollama and pull a model<br/>
 
 Install ollama (if not already installed)<br/>
 Visit https://ollama.ai/ for installation instructions<br/>
 
-Pull the recommended model<br/>
-**ollama pull hf.co/unsloth/gemma-3-1b-it-GGUF:Q4_K_M**
+Pull the recommended model:<br/>
+`ollama pull hf.co/unsloth/gemma-3-1b-it-GGUF:Q4_K_M`
 
-### 3. Set up Python environment
+### 3. Set up Python environment:
 
 **(optional, you may skip to step 4. if you are not using a python environment)**<br/>
-`"python -m venv gcds-chatbot-env`<br/><br/>
+`python -m venv gcds-chatbot-env`<br/><br/>
 
-Activate virtual environment<br/>
+Activate virtual environment:<br/>
 **On macOS/Linux:**<br/>
-`"source gcds-chatbot-env/bin/activate`<br/><br/>
+`source gcds-chatbot-env/bin/activate`<br/><br/>
 
 **On Windows:**<br/>
-`"gcds-chatbot-env\Scripts\activate`<br/>
+`gcds-chatbot-env\Scripts\activate`<br/>
 
-### 4. Install dependencies
+### 4. Install dependencies:
 
-`"pip install -r requirements.txt`
+`pip install -r requirements.txt`
 
-### 5. Initialize the knowledge base
+### 5. Initialize the knowledge base:
 
-`"python setup_knowledge_base.py`
+`python setup_knowledge_base.py`
 
-### 6. Run the chatbot
+### 6. Run the chatbot:
 
-`"python chatbot_gui.py`
+`python chatbot_gui.py`
 
 ## Project Structure
 
@@ -73,31 +73,32 @@ gcds-chatbot/<br/>
 
 ## Usage Examples<br/>
 
-````"
-Question: "I need an interactive link, what component should I use?"<br/>
-Answer: "You can use the gcds-link component for interactive links. Here's the code:<br/>
-html<br/>
-<gcds-link href="https://example.com">Link text</gcds-link><br/>
-For buttons that look like links, you can also use:<br/>
-html<br/>
-<gcds-button button-role="secondary" button-id="link-button"><br/>
-Button Link<br/>
-</gcds-button><br/>
+```"
+**Question:** "I need an interactive link, what component should I use?"
 
+**Answer:** "You can use the gcds-link component for interactive links. Here's the code:
+
+html
+<gcds-link href="https://example.com">Link text</gcds-link>
+
+For buttons that look like links, you can also use:
+html
+<gcds-button button-role="secondary" button-id="link-button">
+Button Link
+</gcds-button>
 
 
 **Question:** "Can you give me the code for a text area?"
 
 **Answer:** "You can use the `gcds-textarea` component:
 
-```html
+html
 <gcds-textarea
   textarea-id="description"
   label="Description"
   hint="Enter your description here"
   required>
 </gcds-textarea>
-```"
 
 ## Supported Models
 
@@ -137,4 +138,4 @@ You can change the model in `chatbot_core.py` by modifying the `MODEL_NAME` vari
 ## License
 
 MIT License - Feel free to use this project for learning and development.
-````
+```
