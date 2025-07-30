@@ -35,7 +35,7 @@ class GCDSChatbotGUI:
         title_label = tk.Label(
             title_frame,
             text="🍁 GCDS Components Chatbot",
-            font=('Arial', 18, 'bold'),
+            font=('Arial', 28, 'bold'),
             bg='#f8f9fa',
             fg='#2c3e50'
         )
@@ -44,7 +44,7 @@ class GCDSChatbotGUI:
         subtitle_label = tk.Label(
             title_frame,
             text="Ask me about Government of Canada Design System components",
-            font=('Arial', 10),
+            font=('Arial', 20),
             bg='#f8f9fa',
             fg='#7f8c8d'
         )
@@ -59,7 +59,7 @@ class GCDSChatbotGUI:
             wrap=tk.WORD,
             width=80,
             height=25,
-            font=('Consolas', 10),
+            font=('Consolas', 20),
             bg='white',
             fg='#2c3e50',
             relief='solid',
@@ -74,7 +74,7 @@ class GCDSChatbotGUI:
         
         self.input_entry = tk.Entry(
             input_frame,
-            font=('Arial', 11),
+            font=('Arial', 21),
             relief='solid',
             borderwidth=1
         )
@@ -87,7 +87,7 @@ class GCDSChatbotGUI:
             command=self.send_message,
             bg='#3498db',
             fg='white',
-            font=('Arial', 10, 'bold'),
+            font=('Arial', 20, 'bold'),
             relief='flat',
             padx=20
         )
@@ -185,9 +185,9 @@ Type your question below and press Enter!
             self.chat_display.insert(tk.END, f"{message}\n", "bot_msg")
         
         # Configure text tags for styling
-        self.chat_display.tag_configure("user", foreground="#2980b9", font=('Arial', 10, 'bold'))
+        self.chat_display.tag_configure("user", foreground="#2980b9", font=('Arial', 20, 'bold'))
         self.chat_display.tag_configure("user_msg", foreground="#2c3e50")
-        self.chat_display.tag_configure("bot", foreground="#27ae60", font=('Arial', 10, 'bold'))
+        self.chat_display.tag_configure("bot", foreground="#27ae60", font=('Arial', 20, 'bold'))
         self.chat_display.tag_configure("bot_msg", foreground="#2c3e50")
         
         # Scroll to bottom
