@@ -4,73 +4,80 @@
 
 # Features:
 
-🤖 Local LLM powered by Ollama
-🎨 Answers design-related questions about GCDS components
-💻 Provides code examples and usage guidance
-🖥️ Simple GUI interface built with Tkinter
-📚 Knowledge base built from GCDS components repository
-🔒 100% local and private - no API keys needed
+🤖 Local LLM powered by Ollama<br/>
+🎨 Answers design-related questions about GCDS components<br/>
+💻 Provides code examples and usage guidance<br/>
+🖥️ Simple GUI interface built with Tkinter<br/>
+📚 Knowledge base built from GCDS components repository<br/>
+🔒 100% local and private - no API keys needed<br/>
 
 # Prerequisites
 
-Python 3.8+ installed on your system
-Ollama installed and running (Download here)
-Git for cloning repositories
-Setup Instructions
+Python 3.8+ installed on your system<br/>
+Ollama installed and running (Download here)<br/>
+Git for cloning repositories<br/>
+Setup Instructions<br/>
 
-1. Clone this repository
-   git clone <https://github.com/RishiSingla04/GCDS-chatbot.git>
-   cd gcds-chatbot
-2. Install Ollama and pull a model
-   Install ollama (if not already installed)
-   Visit https://ollama.ai/ for installation instructions
+### 1. Clone this repository
 
-Pull the recommended model
-ollama pull hf.co/unsloth/gemma-3-1b-it-GGUF:Q4_K_M
+git clone <https://github.com/RishiSingla04/GCDS-chatbot.git><br/>
+cd gcds-chatbot
 
-3. Set up Python environment (optional, you may skip to step 4. if you are not using a python environment)
-   python -m venv gcds-chatbot-env
+### 2. Install Ollama and pull a model<br/>
 
-Activate virtual environment
-On macOS/Linux:
-source gcds-chatbot-env/bin/activate
+Install ollama (if not already installed)<br/>
+Visit https://ollama.ai/ for installation instructions<br/>
 
-On Windows:
-gcds-chatbot-env\Scripts\activate
+Pull the recommended model<br/>
+**ollama pull hf.co/unsloth/gemma-3-1b-it-GGUF:Q4_K_M**
 
-4. Install dependencies
+### 3. Set up Python environment
+
+**(optional, you may skip to step 4. if you are not using a python environment)**<br/>
+python -m venv gcds-chatbot-env<br/><br/>
+
+Activate virtual environment<br/>
+**On macOS/Linux:**<br/>
+source gcds-chatbot-env/bin/activate<br/><br/>
+
+**On Windows:**<br/>
+gcds-chatbot-env\Scripts\activate<br/>
+
+### 4. Install dependencies
 
 pip install -r requirements.txt
 
-5. Initialize the knowledge base
-   python setup_knowledge_base.py
+### 5. Initialize the knowledge base
 
-6. Run the chatbot
-   python chatbot_gui.py
+python setup_knowledge_base.py
 
-# Project Structure
+### 6. Run the chatbot
 
-gcds-chatbot/
-├── README.md
-├── requirements.txt
-├── setup_knowledge_base.py # Clones GCDS repo and processes components
-├── chatbot_gui.py # Main GUI application
-├── chatbot_core.py # Core chatbot logic and Ollama integration
-├── knowledge_processor.py # Processes GCDS components into knowledge base
-├── data/
-│ ├── gcds-components/ # Cloned GCDS repository
-│ └── knowledge_base.json # Processed component knowledge
-└── gcds-chatbot-env/ # Virtual environment (created during setup)
-Usage Examples
-Question: "I need an interactive link, what component should I use?"
-Answer: "You can use the gcds-link component for interactive links. Here's the code:
-html
-<gcds-link href="https://example.com">Link text</gcds-link>
-For buttons that look like links, you can also use:
-html
-<gcds-button button-role="secondary" button-id="link-button">
-Button Link
-</gcds-button>
+python chatbot_gui.py
+
+## Project Structure
+
+gcds-chatbot/<br/>
+├── README.md<br/>
+├── requirements.txt<br/>
+├── setup_knowledge_base.py # Clones GCDS repo and processes components<br/>
+├── chatbot_gui.py # Main GUI application<br/>
+├── chatbot_core.py # Core chatbot logic and Ollama integration<br/>
+├── knowledge_processor.py # Processes GCDS components into knowledge base<br/>
+├── data/<br/>
+│ ├── gcds-components/ # Cloned GCDS repository<br/>
+│ └── knowledge_base.json # Processed component knowledge<br/>
+└── gcds-chatbot-env/ # Virtual environment (created during setup)<br/>
+Usage Examples<br/>
+Question: "I need an interactive link, what component should I use?"<br/>
+Answer: "You can use the gcds-link component for interactive links. Here's the code:<br/>
+html<br/>
+<gcds-link href="https://example.com">Link text</gcds-link><br/>
+For buttons that look like links, you can also use:<br/>
+html<br/>
+<gcds-button button-role="secondary" button-id="link-button"><br/>
+Button Link<br/>
+</gcds-button><br/>
 
 ````"
 
