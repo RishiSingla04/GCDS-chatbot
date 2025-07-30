@@ -20,8 +20,10 @@ Setup Instructions<br/>
 
 ### 1. Clone this repository
 
-`git clone <https://github.com/RishiSingla04/GCDS-chatbot.git>
-cd gcds-chatbot`
+```"
+git clone <https://github.com/RishiSingla04/GCDS-chatbot.git><br/>
+cd gcds-chatbot
+```
 
 ### 2. Install Ollama and pull a model<br/>
 
@@ -34,26 +36,26 @@ Pull the recommended model<br/>
 ### 3. Set up Python environment
 
 **(optional, you may skip to step 4. if you are not using a python environment)**<br/>
-`python -m venv gcds-chatbot-env`
+`"python -m venv gcds-chatbot-env`<br/><br/>
 
 Activate virtual environment<br/>
 **On macOS/Linux:**<br/>
-source gcds-chatbot-env/bin/activate<br/><br/>
+`"source gcds-chatbot-env/bin/activate`<br/><br/>
 
 **On Windows:**<br/>
-gcds-chatbot-env\Scripts\activate<br/>
+`"gcds-chatbot-env\Scripts\activate`<br/>
 
 ### 4. Install dependencies
 
-pip install -r requirements.txt
+`"pip install -r requirements.txt`
 
 ### 5. Initialize the knowledge base
 
-python setup_knowledge_base.py
+`"python setup_knowledge_base.py`
 
 ### 6. Run the chatbot
 
-python chatbot_gui.py
+`"python chatbot_gui.py`
 
 ## Project Structure
 
@@ -68,7 +70,10 @@ gcds-chatbot/<br/>
 │ ├── gcds-components/ # Cloned GCDS repository<br/>
 │ └── knowledge_base.json # Processed component knowledge<br/>
 └── gcds-chatbot-env/ # Virtual environment (created during setup)<br/>
-Usage Examples<br/>
+
+## Usage Examples<br/>
+
+````"
 Question: "I need an interactive link, what component should I use?"<br/>
 Answer: "You can use the gcds-link component for interactive links. Here's the code:<br/>
 html<br/>
@@ -79,7 +84,7 @@ html<br/>
 Button Link<br/>
 </gcds-button><br/>
 
-````"
+
 
 **Question:** "Can you give me the code for a text area?"
 
