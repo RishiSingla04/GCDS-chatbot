@@ -20,8 +20,7 @@ Setup Instructions<br/>
 
 ### 1. Clone this repository
 
-`
-git clone <https://github.com/RishiSingla04/GCDS-chatbot.git>`
+`git clone <https://github.com/RishiSingla04/GCDS-chatbot.git>`
 <br/>
 `cd gcds-chatbot`
 
