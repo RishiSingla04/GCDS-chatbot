@@ -1,0 +1,7 @@
+# GCDS Chatbot Requirements
+ollama>=0.2.1
+GitPython>=3.1.40
+requests>=2.31.0
+
+# Note: tkinter comes built-in with Python
+# Note: json and pathlib are built-in modules
