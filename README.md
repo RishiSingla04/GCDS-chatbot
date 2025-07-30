@@ -1,63 +1,66 @@
-GCDS Components Chatbot
-A local chatbot that helps developers with Government of Canada Design System (GCDS) components. Uses Ollama for local LLM inference with no API keys required.
-Features
+# GCDS Components Chatbot
+
+# A local chatbot that helps developers with Government of Canada Design System (GCDS) components. Uses Ollama for local LLM inference with no API keys required.
+
+# Features:
+
 🤖 Local LLM powered by Ollama
 🎨 Answers design-related questions about GCDS components
 💻 Provides code examples and usage guidance
 🖥️ Simple GUI interface built with Tkinter
 📚 Knowledge base built from GCDS components repository
 🔒 100% local and private - no API keys needed
-Prerequisites
+
+# Prerequisites
+
 Python 3.8+ installed on your system
 Ollama installed and running (Download here)
 Git for cloning repositories
 Setup Instructions
+
 1. Clone this repository
-bash
-git clone <your-repo-url>
-cd gcds-chatbot
+   git clone <https://github.com/RishiSingla04/GCDS-chatbot.git>
+   cd gcds-chatbot
 2. Install Ollama and pull a model
-bash
-# Install ollama (if not already installed)
-# Visit https://ollama.ai/ for installation instructions
+   Install ollama (if not already installed)
+   Visit https://ollama.ai/ for installation instructions
 
-# Pull a recommended model (choose one)
-ollama pull mistral:7b       # Recommended - Fast and efficient
-# OR
-ollama pull llama3.1:8b      # Good balance of speed and quality
-# OR
-ollama pull codellama:7b     # Better for code generation
-3. Set up Python environment
-bash
-# Create virtual environment
-python -m venv gcds-chatbot-env
+Pull the recommended model
+ollama pull hf.co/unsloth/gemma-3-1b-it-GGUF:Q4_K_M
 
-# Activate virtual environment
-# On macOS/Linux:
+3. Set up Python environment (optional, you may skip to step 4. if you are not using a python environment)
+   python -m venv gcds-chatbot-env
+
+Activate virtual environment
+On macOS/Linux:
 source gcds-chatbot-env/bin/activate
-# On Windows:
-# gcds-chatbot-env\Scripts\activate
 
-# Install dependencies
+On Windows:
+gcds-chatbot-env\Scripts\activate
+
+4. Install dependencies
+
 pip install -r requirements.txt
-4. Initialize the knowledge base
-bash
-python setup_knowledge_base.py
-5. Run the chatbot
-bash
-python chatbot_gui.py
-Project Structure
+
+5. Initialize the knowledge base
+   python setup_knowledge_base.py
+
+6. Run the chatbot
+   python chatbot_gui.py
+
+# Project Structure
+
 gcds-chatbot/
 ├── README.md
 ├── requirements.txt
-├── setup_knowledge_base.py    # Clones GCDS repo and processes components
-├── chatbot_gui.py            # Main GUI application
-├── chatbot_core.py           # Core chatbot logic and Ollama integration
-├── knowledge_processor.py    # Processes GCDS components into knowledge base
+├── setup_knowledge_base.py # Clones GCDS repo and processes components
+├── chatbot_gui.py # Main GUI application
+├── chatbot_core.py # Core chatbot logic and Ollama integration
+├── knowledge_processor.py # Processes GCDS components into knowledge base
 ├── data/
-│   ├── gcds-components/      # Cloned GCDS repository
-│   └── knowledge_base.json   # Processed component knowledge
-└── gcds-chatbot-env/         # Virtual environment (created during setup)
+│ ├── gcds-components/ # Cloned GCDS repository
+│ └── knowledge_base.json # Processed component knowledge
+└── gcds-chatbot-env/ # Virtual environment (created during setup)
 Usage Examples
 Question: "I need an interactive link, what component should I use?"
 Answer: "You can use the gcds-link component for interactive links. Here's the code:
@@ -66,9 +69,10 @@ html
 For buttons that look like links, you can also use:
 html
 <gcds-button button-role="secondary" button-id="link-button">
-  Button Link
+Button Link
 </gcds-button>
-```"
+
+````"
 
 **Question:** "Can you give me the code for a text area?"
 
@@ -121,3 +125,4 @@ You can change the model in `chatbot_core.py` by modifying the `MODEL_NAME` vari
 ## License
 
 MIT License - Feel free to use this project for learning and development.
+````

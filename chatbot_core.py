@@ -14,25 +14,25 @@ except ImportError:
     sys.exit(1)
 
 class GCDSChatbot:
-    def __init__(self, knowledge_base_path="data/knowledge_base.json", model_name="llama3.2:3b"):
+    def __init__(self, knowledge_base_path="data/knowledge_base.json", model_name="hf.co/unsloth/gemma-3-1b-it-GGUF:Q4_K_M"):
         self.model_name = model_name
         self.knowledge_base = self._load_knowledge_base(knowledge_base_path)
         self.conversation_history = []
         
         # Test Ollama connection
-        try:
-            ollama.list()
-            print(f"✅ Connected to Ollama")
+        # try:
+        #     ollama.list()
+        #     print(f"✅ Connected to Ollama")
             
-            # Check if model is available
-            available_models = [model['name'] for model in ollama.list()['models']]
-            if self.model_name not in available_models:
-                print(f"⚠️  Model '{self.model_name}' not found locally")
-                print(f"Available models: {', '.join(available_models) if available_models else 'None'}")
-                print(f"To install: ollama pull {self.model_name}")
-        except Exception as e:
-            print(f"❌ Could not connect to Ollama: {e}")
-            print("Make sure Ollama is running with: ollama serve")
+        #     # Check if model is available
+        #     available_models = [model['name'] for model in ollama.list()['models']]
+        #     if self.model_name not in available_models:
+        #         print(f"⚠️  Model '{self.model_name}' not found locally")
+        #         print(f"Available models: {', '.join(available_models) if available_models else 'None'}")
+        #         print(f"To install: ollama pull {self.model_name}")
+        # except Exception as e:
+        #     print(f"❌ Could not connect to Ollama: {e}")
+        #     print("Make sure Ollama is running with: ollama serve")
     
     def _load_knowledge_base(self, path):
         """Load the processed knowledge base"""
