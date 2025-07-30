@@ -1,6 +1,6 @@
 # GCDS Components Chatbot
 
-# A local chatbot that helps developers with Government of Canada Design System (GCDS) components. Uses Ollama for local LLM inference with no API keys required.
+A local chatbot that helps developers with Government of Canada Design System (GCDS) components. Uses Ollama for local LLM inference with no API keys required.
 
 # Features:
 
@@ -20,8 +20,8 @@ Setup Instructions<br/>
 
 ### 1. Clone this repository
 
-git clone <https://github.com/RishiSingla04/GCDS-chatbot.git><br/>
-cd gcds-chatbot
+`git clone <https://github.com/RishiSingla04/GCDS-chatbot.git>
+cd gcds-chatbot`
 
 ### 2. Install Ollama and pull a model<br/>
 
@@ -34,7 +34,7 @@ Pull the recommended model<br/>
 ### 3. Set up Python environment
 
 **(optional, you may skip to step 4. if you are not using a python environment)**<br/>
-python -m venv gcds-chatbot-env<br/><br/>
+`python -m venv gcds-chatbot-env`
 
 Activate virtual environment<br/>
 **On macOS/Linux:**<br/>
